@@ -592,7 +592,7 @@ function($scope, $routeParams) {
             var gridWid = pageWid / 12 * 9 + 20;
 
             $("#alarm_host_" + hostt.hostid).jqxGrid({
-                theme: themeConstant,
+                theme: btnTheme,
                 width: gridWid,
                 sortable: true,
                 autoheight: true,
@@ -697,7 +697,7 @@ function($scope, $routeParams) {
 //                        height: 20
 //                    });
                     confirmButton.jqxButton({
-                        theme: btnTheme,
+                        theme: themeConstant,
                         width: 100,
                         height: 20
                     });

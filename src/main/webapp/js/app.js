@@ -6,23 +6,11 @@ var btnTheme = "darkblue";
 var baseUrl = "rest/v1/";
 var vnfNameQueryUrl = baseUrl + "cm/config";
 var vnfName = "vEPG";
-$.ajax({
-    data: "get",
-    url: vnfNameQueryUrl,
-    cache: false,
-    async: false,
-    success: function(result) {
-    	console.log("vnf name is: " + result.vnfInstanceID);
-    	vnfName = result.vnfInstanceID;
-    }, 
-    error: function() {
-    }
-});
 
 // Declare app level module which depends on filters, and services
 angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'myApp.controllers','ngRoute','ngSanitize']).
   config(['$routeProvider', function($routeProvider) {
-  	 $routeProvider.when('/vnftopo', {templateUrl: 'partials/partial1_2.html', controller: 'MyCtrlvnftopo'});
+  	$routeProvider.when('/infoman', {templateUrl: 'partials/infoman.html', controller: 'MyCtrlInfoman'});
     $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
     $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
     $routeProvider.when('/view3', {templateUrl: 'partials/partial3.html', controller: 'MyCtrl3'});
@@ -113,39 +101,6 @@ $(document).ready(function () {
             
             ];
 
-            // create jqxTree
-            $('#jqxTree').jqxTree({ source: source, width: '250px'});
-            
-            $('#jqxTree').on('select', function (event) {
-                var args = event.args;
-                var item = $('#jqxTree').jqxTree('getItem', args.element);
-                //showNotification(item.id);
-                if (item.id == "tree_cpeg1_perf_vnf") {
-                	window.location.href="#/view3?vnfid=123";
-                } else if (item.id == "tree_cpeg1_a") {
-                	window.location.href="#/view2";
-                } else if (item.id == "tree_cpeg1_br") {
-                	window.location.href="#/view4";
-                } else if (item.id == "tree_vnf_cpeg1") {
-                	window.location.href="#/vnftopo";
-                } else if (item.id == "tree_ns_ns1") {
-                	window.location.href="#/view1";
-                } else if (item.id == "tree_cpeg1_perf_vm") {
-                	window.location.href="#/view3_2";
-                } else if (item.id == "tree_cpeg1_up") {
-                	window.location.href="#/view5";
-                } else if (item.id == "tree_mme1") {
-                	window.location.href="#/view6";
-                }
-                
-            });
-            
-            $("#timeNotification").jqxNotification({
-                width: 250, position: "top-right", opacity: 0.9,
-                autoOpen: false, animationOpenDelay: 800, autoClose: true, autoCloseDelay: 3000, template: "info"
-            });
-            
-           
 });
 
 function showNotification(content) {
