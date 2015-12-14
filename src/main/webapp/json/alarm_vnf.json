@@ -1,0 +1,44 @@
+{
+  "total": 3,
+  "data": [
+    {
+      "sequenceNo": 5,
+      "component": "vnf1",
+      "alarmName": "License Mismatch",
+      "type": "ProcessingErrorAlarm",
+      "severity": "MAJOR",
+      "probCause": null,
+      "timestamp": "2015-09-22 07:25:14",
+      "alarmBody": "Licensing supervision is halted for the duration of = this alarm.",
+      "ackStatus": false,
+      "clearStatus": false,
+      "clearTime": null
+    },
+    {
+      "sequenceNo": 3,
+      "component": "vnf1",
+      "alarmName": "License Mismatch",
+      "type": "ProcessingErrorAlarm",
+      "severity": "MAJOR",
+      "probCause": null,
+      "timestamp": "2015-09-20 07:25:14",
+      "alarmBody": "Licensing supervision is halted for the duration of = this alarm.",
+      "ackStatus": false,
+      "clearStatus": true,
+      "clearTime": "2015-10-01 22:04:00"
+    },
+    {
+      "sequenceNo": 1,
+      "component": "vnf1",
+      "alarmName": "License Mismatch",
+      "type": "ProcessingErrorAlarm",
+      "severity": "MAJOR",
+      "probCause": null,
+      "timestamp": "2015-09-18 07:25:14",
+      "alarmBody": "Licensing supervision is halted for the duration of = this alarm.",
+      "ackStatus": false,
+      "clearStatus": true,
+      "clearTime": "2015-10-01 21:59:00"
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+    "vrflist": [],
+    "vmlist": [
+        {
+            "createTime": null,
+            "updateTime": null,
+            "vappId": null,
+            "vimObjectId": "52d0e814-2965-4f1b-a6f5-f028c49650fb",
+            "hostId": "a57d28dbe488c0315b2f45ea80e286d6063e2c60831319f3be5280bc",
+            "id": "FSB-1.11-2373",
+            "vimZone": null,
+            "vmVnics": [
+                {
+                    "id": "Internal-1-VNIC-2379",
+                    "externalIpAddress": "",
+                    "macAddress": "00:80:37:0e:0b:12",
+                    "vn": {
+                        "ipAddressRange": null,
+                        "id": "Internal-1-2369",
+                        "enabled": false,
+                        "networkType": null,
+                        "dhcpEnabled": false,
+                        "category": null,
+                        "description": null,
+                        "name": "Internal-1",
+                        "ipVersion": null,
+                        "provisioningStatus": null
+                    },
+                    "internalIpAddress": [
+                        "30.30.8.2"
+                    ],
+                    "name": "Internal-1-VNIC"
+                },
+                {
+                    "id": "Internal-2-VNIC-2380",
+                    "externalIpAddress": "",
+                    "macAddress": "00:80:37:0e:0b:12",
+                    "vn": {
+                        "ipAddressRange": null,
+                        "id": "Internal-2-2370",
+                        "enabled": false,
+                        "networkType": null,
+                        "dhcpEnabled": false,
+                        "category": null,
+                        "description": null,
+                        "name": "Internal-2",
+                        "ipVersion": null,
+                        "provisioningStatus": null
+                    },
+                    "internalIpAddress": [
+                        "30.30.9.2"
+                    ],
+                    "name": "Internal-2-VNIC"
+                },
+                {
+                    "id": "Admin-VNIC-2381",
+                    "externalIpAddress": "",
+                    "macAddress": "fa:16:3e:ba:7c:57",
+                    "vn": {
+                        "ipAddressRange": null,
+                        "id": "Admin-2368",
+                        "enabled": false,
+                        "networkType": null,
+                        "dhcpEnabled": false,
+                        "category": null,
+                        "description": null,
+                        "name": "Admin",
+                        "ipVersion": null,
+                        "provisioningStatus": null
+                    },
+                    "internalIpAddress": [
+                        "30.30.7.2"
+                    ],
+                    "name": "Admin-VNIC"
+                }
+            ],
+            "name": "FSB-1.11",
+            "nothing": null,
+            "hostName": "compute-0-3",
+            "vimzoneName": null,
+            "vnfinstanceId": null,
+            "provisioningStatus": null,
+            "vmhdName": null,
+            "operationalStatus": null
+        },
+        {
+            "createTime": null,
+            "updateTime": null,
+            "vappId": null,
+            "vimObjectId": "43ea1a6a-7654-47f2-b69c-ef017c1329b1",
+            "hostId": "a57d28dbe488c0315b2f45ea80e286d6063e2c60831319f3be5280bc",
+            "id": "NCB-1.15-2375",
+            "vimZone": null,
+            "vmVnics": [
+                {
+                    "id": "Internal-1-VNIC-2382",
+                    "externalIpAddress": "",
+                    "macAddress": "00:80:37:0e:0f:12",
+                    "vn": {
+                        "ipAddressRange": null,
+                        "id": "Internal-1-2369",
+                        "enabled": false,
+                        "networkType": null,
+                        "dhcpEnabled": false,
+                        "category": null,
+                        "description": null,
+                        "name": "Internal-1",
+                        "ipVersion": null,
+                        "provisioningStatus": null
+                    },
+                    "internalIpAddress": [
+                        "30.30.8.3"
+                    ],
+                    "name": "Internal-1-VNIC"
+                },
+                {
+                    "id": "Internal-2-VNIC-2383",
+                    "externalIpAddress": "",
+                    "macAddress": "00:80:37:0e:0f:12",
+                    "vn": {
+                        "ipAddressRange": null,
+                        "id": "Internal-2-2370",
+                        "enabled": false,
+                        "networkType": null,
+                        "dhcpEnabled": false,
+                        "category": null,
+                        "description": null,
+                        "name": "Internal-2",
+                        "ipVersion": null,
+                        "provisioningStatus": null
+                    },
+                    "internalIpAddress": [
+                        "30.30.9.3"
+                    ],
+                    "name": "Internal-2-VNIC"
+                }
+            ],
+            "name": "NCB-1.15",
+            "nothing": null,
+            "hostName": "compute-0-3",
+            "vimzoneName": null,
+            "vnfinstanceId": null,
+            "provisioningStatus": null,
+            "vmhdName": null,
+            "operationalStatus": null
+        },
+        {
+            "createTime": null,
+            "updateTime": null,
+            "vappId": null,
+            "vimObjectId": "e7491b41-638a-414f-98fc-f6d343d05126",
+            "hostId": "a57d28dbe488c0315b2f45ea80e286d6063e2c60831319f3be5280bc",
+            "id": "vLC-1.1-2377",
+            "vimZone": null,
+            "vmVnics": [
+                {
+                    "id": "Internal-1-VNIC-2384",
+                    "externalIpAddress": "",
+                    "macAddress": "00:80:37:0e:01:12",
+                    "vn": {
+                        "ipAddressRange": null,
+                        "id": "Internal-1-2369",
+                        "enabled": false,
+                        "networkType": null,
+                        "dhcpEnabled": false,
+                        "category": null,
+                        "description": null,
+                        "name": "Internal-1",
+                        "ipVersion": null,
+                        "provisioningStatus": null
+                    },
+                    "internalIpAddress": [
+                        "30.30.8.4"
+                    ],
+                    "name": "Internal-1-VNIC"
+                },
+                {
+                    "id": "Internal-2-VNIC-2385",
+                    "externalIpAddress": "",
+                    "macAddress": "00:80:37:0e:01:12",
+                    "vn": {
+                        "ipAddressRange": null,
+                        "id": "Internal-2-2370",
+                        "enabled": false,
+                        "networkType": null,
+                        "dhcpEnabled": false,
+                        "category": null,
+                        "description": null,
+                        "name": "Internal-2",
+                        "ipVersion": null,
+                        "provisioningStatus": null
+                    },
+                    "internalIpAddress": [
+                        "30.30.9.4"
+                    ],
+                    "name": "Internal-2-VNIC"
+                },
+                {
+                    "id": "vLC-P1-VNIC-2386",
+                    "externalIpAddress": "",
+                    "macAddress": "fa:16:3e:99:4e:22",
+                    "vn": {
+                        "ipAddressRange": null,
+                        "id": "vLC-P1-2371",
+                        "enabled": false,
+                        "networkType": null,
+                        "dhcpEnabled": false,
+                        "category": null,
+                        "description": null,
+                        "name": "vLC-P1",
+                        "ipVersion": null,
+                        "provisioningStatus": null
+                    },
+                    "internalIpAddress": [
+                        "30.30.10.2"
+                    ],
+                    "name": "vLC-P1-VNIC"
+                }
+            ],
+            "name": "vLC-1.1",
+            "nothing": null,
+            "hostName": "compute-0-3",
+            "vimzoneName": null,
+            "vnfinstanceId": null,
+            "provisioningStatus": null,
+            "vmhdName": null,
+            "operationalStatus": null
+        },
+        {
+            "createTime": null,
+            "updateTime": null,
+            "vappId": null,
+            "vimObjectId": "55fa7366-34ef-4d16-a478-9f81eed70618",
+            "hostId": "46dc937c0eb57019d378d80cc237e02aace81af10a746f73d320c072",
+            "id": "GPB-2.1-2378",
+            "vimZone": null,
+            "vmVnics": [
+                {
+                    "id": "Internal-1-VNIC-2387",
+                    "externalIpAddress": "",
+                    "macAddress": "00:80:37:0e:01:22",
+                    "vn": {
+                        "ipAddressRange": null,
+                        "id": "Internal-1-2369",
+                        "enabled": false,
+                        "networkType": null,
+                        "dhcpEnabled": false,
+                        "category": null,
+                        "description": null,
+                        "name": "Internal-1",
+                        "ipVersion": null,
+                        "provisioningStatus": null
+                    },
+                    "internalIpAddress": [
+                        "30.30.8.5"
+                    ],
+                    "name": "Internal-1-VNIC"
+                },
+                {
+                    "id": "Internal-2-VNIC-2388",
+                    "externalIpAddress": "",
+                    "macAddress": "00:80:37:0e:01:22",
+                    "vn": {
+                        "ipAddressRange": null,
+                        "id": "Internal-2-2370",
+                        "enabled": false,
+                        "networkType": null,
+                        "dhcpEnabled": false,
+                        "category": null,
+                        "description": null,
+                        "name": "Internal-2",
+                        "ipVersion": null,
+                        "provisioningStatus": null
+                    },
+                    "internalIpAddress": [
+                        "30.30.9.5"
+                    ],
+                    "name": "Internal-2-VNIC"
+                }
+            ],
+            "name": "GPB-2.1",
+            "nothing": null,
+            "hostName": "compute-0-2",
+            "vimzoneName": null,
+            "vnfinstanceId": null,
+            "provisioningStatus": null,
+            "vmhdName": null,
+            "operationalStatus": null
+        }
+    ],
+    "vnlist": [
+        {
+            "ipAddressRange": "30.30.7.0/24",
+            "id": "Admin-2368",
+            "enabled": true,
+            "networkType": "vlan",
+            "dhcpEnabled": false,
+            "category": "L3",
+            "description": "Admin network",
+            "name": "Admin",
+            "ipVersion": "IPv4",
+            "provisioningStatus": "ACTIVE"
+        },
+        {
+            "ipAddressRange": "30.30.8.0/24",
+            "id": "Internal-1-2369",
+            "enabled": true,
+            "networkType": "vlan",
+            "dhcpEnabled": false,
+            "category": "L3",
+            "description": "Internal-1 network",
+            "name": "Internal-1",
+            "ipVersion": "IPv4",
+            "provisioningStatus": "ACTIVE"
+        },
+        {
+            "ipAddressRange": "30.30.9.0/24",
+            "id": "Internal-2-2370",
+            "enabled": true,
+            "networkType": "vlan",
+            "dhcpEnabled": false,
+            "category": "L3",
+            "description": "Internal-2 network",
+            "name": "Internal-2",
+            "ipVersion": "IPv4",
+            "provisioningStatus": "ACTIVE"
+        },
+        {
+            "ipAddressRange": "30.30.10.0/24",
+            "id": "vLC-P1-2371",
+            "enabled": true,
+            "networkType": "vlan",
+            "dhcpEnabled": false,
+            "category": "L3",
+            "description": "External network",
+            "name": "vLC-P1",
+            "ipVersion": "IPv4",
+            "provisioningStatus": "ACTIVE"
+        }
+    ]
+}

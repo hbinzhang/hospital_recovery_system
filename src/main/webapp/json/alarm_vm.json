@@ -1,0 +1,53 @@
+{
+  "total": 2,
+  "data": [
+    {
+      "sequenceNo": 187505,
+      "component": "9f61598c-4de8-4d06-8f17-dcaaa4f0d346",
+      "timestamp": "2015-09-30 14:39:23",
+      "type": "other",
+      "major": "193",
+      "minor": "2031702",
+      "severity": "MINOR",
+      "probCause": "underlayingResourceUnavailable",
+      "specificProblem": "VM Unavailable",
+      "additionalText": "{\"host\": \"compute-0-7\"}",
+      "additionalInfo": "None",
+      "ackStatus": false,
+      "clearStatus": false,
+      "clearTime": null
+    },
+    {
+      "sequenceNo": 187504,
+      "component": "9f61598c-4de8-4d06-8f17-dcaaa4f0d346",
+      "timestamp": "2015-09-30 12:39:23",
+      "type": "other",
+      "major": "193",
+      "minor": "2031702",
+      "severity": "MINOR",
+      "probCause": "underlayingResourceUnavailable",
+      "specificProblem": "VM Unavailable",
+      "additionalText": "{\"host\": \"compute-0-7\"}",
+      "additionalInfo": "None",
+      "ackStatus": false,
+      "clearStatus": false,
+      "clearTime": null
+    },
+    {
+      "sequenceNo": 187506,
+      "component": "9f61598c-4de8-4d06-8f17-dcaaa4f0d346",
+      "timestamp": "2015-09-30 12:39:23",
+      "type": "other",
+      "major": "193",
+      "minor": "2031702",
+      "severity": "MINOR",
+      "probCause": "underlayingResourceUnavailable",
+      "specificProblem": "VM Unavailable",
+      "additionalText": "{\"host\": \"compute-0-7\"}",
+      "additionalInfo": "None",
+      "ackStatus": false,
+      "clearStatus": false,
+      "clearTime": null
+    }
+  ]
+}
