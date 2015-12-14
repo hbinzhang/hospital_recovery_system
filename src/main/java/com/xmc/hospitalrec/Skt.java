@@ -35,7 +35,7 @@ public final class Skt {
 	public static String getDatabaseUrl() {
 //		String dbUrl = Skt.getConfiguration( "database-url", isDevelopmentProfile()? "jdbc:hsqldb:mem:nfvo"
 //				: "jdbc:mysql://root:mysql@localhost/nfvo");
-		String dbUrl = "jdbc:mysql://root:mysql@localhost/skt?useUnicode=true&characterEncoding=utf-8";
+		String dbUrl = "jdbc:mysql://root:mysql@localhost/hospitalrec?useUnicode=true&characterEncoding=utf-8";
 //		System.out.println("dbUrl : " + dbUrl);
 		return dbUrl;
 	}
