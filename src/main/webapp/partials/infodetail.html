@@ -1,11 +1,116 @@
 <h1 id="headtitleTP" class="page-header">信息管理->新建信息</h1>
-<div class="row placeholders">
-	<div class="col-xs-12 col-sm-12 placeholder" style="margin: 0px;">
-		<div id="page">
-			<div id="right_panel">
-			</div>
-		</div>
-
-	</div>
+<div class="row">
+	<div id="splitTitleUserInfo" class="col-sm-12 col-md-12" style="text-align:left;margin-left:150px;"><h4 id="tt">基本信息</h4></div>
 </div>
 
+<div class="row">
+	<div id="placeHolderLeft" class="col-sm-2 col-md-2"></div>
+	<div id="customWindowContentLeft" class="col-sm-4 col-md-4">
+		<div style="margin-left: 20px; margin-top: 10px;">
+			姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名: <input type="text"
+				style="width: 175px; margin-left: 23px; border: 1px solid #aaa"
+				id="patiantName" /> <br />
+		</div>
+	</div>
+	<div id="customWindowContentRight" class="col-sm-4 col-md-4">
+		<div style="margin-left: 20px; margin-top: 10px;">
+			性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别: <input type="text"
+				style="width: 175px; margin-left: 23px; border: 1px solid #aaa"
+				id="patiantGender" /> <br />
+		</div>
+	</div>
+	<div id="placeHolderRight" class="col-sm-2 col-md-2"></div>
+</div>
+<div class="row">
+	<div id="placeHolderLeft" class="col-sm-2 col-md-2"></div>
+	<div id="customWindowContentLeft" class="col-sm-4 col-md-4">
+		<div style="margin-left: 20px; margin-top: 10px;">
+			类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型: <input type="text"
+				style="width: 175px; margin-left: 23px; border: 1px solid #aaa"
+				id="patiantType" /> <br />
+		</div>
+	</div>
+	<div id="customWindowContentRight" class="col-sm-4 col-md-4">
+		<div style="margin-left: 20px; margin-top: 10px;">
+			职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业: <input type="text"
+				style="width: 175px; margin-left: 23px; border: 1px solid #aaa"
+				id="patiantCarrier" /> <br />
+		</div>
+	</div>
+	<div id="placeHolderRight" class="col-sm-2 col-md-2"></div>
+</div>
+<div class="row">
+	<div id="placeHolderLeft" class="col-sm-2 col-md-2"></div>
+	<div id="customWindowContentLeft" class="col-sm-4 col-md-4">
+		<div style="margin-left: 20px; margin-top: 10px;">
+			医保类型: <input type="text"
+				style="width: 175px; margin-left: 23px; border: 1px solid #aaa"
+				id="inssuranceType" /> <br />
+		</div>
+	</div>
+	<div id="customWindowContentRight" class="col-sm-4 col-md-4">
+		<div style="margin-left: 20px; margin-top: 10px;">
+			医保范围: <input type="text"
+				style="width: 175px; margin-left: 23px; border: 1px solid #aaa"
+				id="inssuranceRange" /> <br />
+		</div>
+	</div>
+	<div id="placeHolderRight" class="col-sm-2 col-md-2"></div>
+</div>
+
+<div class="row">
+	<div id="splitTitleUserInfo" class="col-sm-12 col-md-12 splitor_header" style="text-align:left;margin-left:150px;"><h4 id="tt">医生信息</h4></div>
+</div>
+<div class="row">
+	<div id="placeHolderLeft" class="col-sm-2 col-md-2"></div>
+	<div id="customWindowContentLeft" class="col-sm-4 col-md-4">
+		<div style="margin-left: 20px; margin-top: 8px;">
+			医生姓名: <input type="text"
+				style="width: 175px; margin-left: 23px; border: 1px solid #aaa"
+				id="doctorNameInput" /> <br />
+		</div>
+	</div>
+	<div id="customWindowContentRight" class="col-sm-4 col-md-4">
+		<div style="margin-left: 20px; margin-top: 8px;">
+			医生编号: <input type="text"
+				style="width: 175px; margin-left: 23px; border: 1px solid #aaa"
+				id="doctorCodeInput" /> <br />
+		</div>
+	</div>
+	<div id="placeHolderRight" class="col-sm-2 col-md-2"></div>
+</div>
+
+<div class="row">
+	<div id="splitTitleUserInfo" class="col-sm-12 col-md-12 splitor_header" style="text-align:left;margin-left:150px;"><h4 id="tt">理疗项目</h4></div>
+</div>
+<div class="row">
+	<div id="placeHolderLeft" class="col-sm-2 col-md-2"></div>
+	<div id="customWindowContentLeft" class="col-sm-8 col-md-8">
+		<div id="healItemTable"></div>
+	</div>
+	<div id="placeHolderRight" class="col-sm-2 col-md-2"></div>
+</div>
+
+<div class="row">
+	<div id="splitTitleUserInfo" class="col-sm-12 col-md-12 splitor_header" style="text-align:left;margin-left:150px;"><h4 id="tt">理疗记录</h4></div>
+</div>
+<div class="row">
+	<div id="placeHolderLeft" class="col-sm-2 col-md-2"></div>
+	<div id="customWindowContentLeft" class="col-sm-8 col-md-8">
+		<div id="healRecordTable"></div>
+	</div>
+	<div id="placeHolderRight" class="col-sm-2 col-md-2"></div>
+</div>
+
+<div class="row splitor_header">
+	<div id="placeHolderLeft" class="col-sm-5 col-md-5"></div>
+	<div id="customWindowContentLeft" class="col-sm-1 col-md-1">
+		<input type="button" value="确定" id="sureButton" />
+			
+	</div>
+	<div id="customWindowContentRight" class="col-sm-1 col-md-1">
+		<input type="button" value="取消" id="cancelButton" />
+	</div>
+	<div id="placeHolderRight" class="col-sm-5 col-md-5"></div>
+</div>
+<div class="row" style="text-align:left;margin-bottom:70px;"></div>

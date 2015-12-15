@@ -1,0 +1,29 @@
+{
+  "total": 3,
+  "data": [
+    {
+      "sequenceNo": 1,
+      "phyFactor": "高频",
+      "doctor": "张三",
+      "times": "1",
+      "description": "左侧，微热",
+      "datetime": "2015-12-11 12:12:11"
+    },
+    {
+      "sequenceNo": 2,
+      "phyFactor": "高频",
+      "doctor": "张三",
+      "times": "2",
+      "description": "左侧，微热",
+      "datetime": "2015-12-12 12:12:11"
+    },
+    {
+      "sequenceNo": 3,
+      "phyFactor": "高频",
+      "doctor": "张三",
+      "times": "1",
+      "description": "左侧，微热",
+      "datetime": "2015-12-13 12:12:11"
+    }
+  ]
+}

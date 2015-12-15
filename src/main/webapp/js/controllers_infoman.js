@@ -188,6 +188,34 @@ angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
 		          }
 	});
 	
+//	$("#infoman_table_btn_add").jqxButton({
+//		  theme: btnTheme,
+//		  width: 100,
+//		  height: 20
+//	  });
+//	
+//	$("#infoman_table_btn_detail").jqxButton({
+//		  theme: btnTheme,
+//		  width: 100,
+//		  height: 20
+//	  });
+//	
+//	$("#infoman_table_btn_query").jqxButton({
+//		  theme: btnTheme,
+//		  width: 100,
+//		  height: 20
+//	  });
+//	
+//	$("#infoman_table_btn_query").click(function(event) {
+//		var showtoolbar = $('#infoman_table').jqxGrid('showtoolbar'); 
+//		if (showtoolbar) {
+//			$('#infoman_table').jqxGrid({ showtoolbar: false}); 
+//		} else {
+//			$('#infoman_table').jqxGrid({ showtoolbar: true}); 
+//		}
+//		
+//	});
+	
 	$("#infoman_table").on("pagechanged", function (event) {
         var args = event.args;
         console.log("pagechanged Page:" + args.pagenum + ", Page Size: " + args.pagesize);

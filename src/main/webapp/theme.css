@@ -202,3 +202,7 @@ body {
 #contextmenu2 li a:hover {
 	background: #fff;
 }
+
+.splitor_header {
+	margin-top: 25px;
+}
