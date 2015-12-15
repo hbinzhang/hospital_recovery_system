@@ -19,7 +19,7 @@ public class VnfAlarmTask {
 	@Inject
 	private AlarmService service;
 	
-	@Scheduled(cron="25 * * * * *")
+//	@Scheduled(cron="25 * * * * *")
 	public void updateCurAlarmVnf() {
 		LOGGER.info("[updateCurAlarmVnf]");
 		

@@ -26,7 +26,7 @@ public class VnfBackupTask {
 	@Inject
 	BrService service;
 
-	@Scheduled(cron = "0 * * * * *")
+//	@Scheduled(cron = "0 * * * * *")
 	public void backup() {
 		LOGGER.info("[backup]");
 

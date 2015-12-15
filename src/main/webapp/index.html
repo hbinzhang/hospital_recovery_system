@@ -46,10 +46,10 @@
               <a class="dropdown-toggle" href="#/infoman" id="themes">信息管理</a>
             </li>
             <li>
-              <a href="#">报表管理</a>
+              <a href="#/reportman">报表管理</a>
             </li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">帮助手册 <span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown"  id="download">帮助手册 <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="download">
                 <li><a href="#">信息管理</a></li>
                 <li class="divider"></li>
@@ -99,63 +99,28 @@
     <script src="./angular.js-1.3.15/angular-route.min.js"></script>
     <script src="./angular.js-1.3.15/angular-sanitize.min.js"></script>
     
-    <script src="./highstock-2.1.8/highstock.js"></script>
+    <!-- <script src="./highstock-2.1.8/highstock.js"></script>
     <script src="./highchart-4.1.8/js/highcharts.js"></script>
-		<script src="./highchart-4.1.8/js/highcharts-more.js"></script>
+	<script src="./highchart-4.1.8/js/highcharts-more.js"></script> -->
     
     <script src="./highstock-2.1.8/modules/exporting.js"></script>
-    
-    <link rel="stylesheet" href="./jqwidgets/styles/jqx.base.css" type="text/css" />
-    <link rel="stylesheet" href="./jqwidgets/styles/jqx.darkblue.css" type="text/css" />
-    <link rel="stylesheet" href="./jqwidgets/styles/jqx.bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="./jqwidgets/styles/jqx.orange.css" type="text/css" />
-    <script type="text/javascript" src="./jqwidgets/scripts/demos.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxnotification.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxpanel.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxtree.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxdata.js"></script> 
-    <script type="text/javascript" src="./jqwidgets/jqxtabs.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxinput.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxwindow.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxradiobutton.js"></script>
-	<script type="text/javascript" src="./jqwidgets/jqxdatetimeinput.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxcalendar.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxtooltip.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxcheckbox.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxlistbox.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxcombobox.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxmenu.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxprogressbar.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxgrid.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxgrid.sort.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxgrid.filter.js"></script>
-    <script type="text/javascript" src="./jqwidgets/jqxgrid.selection.js"></script> 
-    <script type="text/javascript" src="./jqwidgets/jqxgrid.edit.js"></script>  
-    <script type="text/javascript" src="./jqwidgets/jqxgrid.columnsresize.js"></script>   
-	  <!--
-	  <link rel="stylesheet" href="./qunee/demo.css"/>
-	  <script type="text/javascript" src="./qunee/qunee-min.js"></script>
-		<script type="text/javascript" src="./qunee/common.js"></script>
-		<script type="text/javascript" src="./qunee/graphs.js"></script>
-		<script type="text/javascript" src="./qunee/demo.js"></script>
-		<link rel="stylesheet" href="./qunee/codemirror.css">
-		<script src="./qunee/codemirror.js"></script>
-		<script src="./qunee/javascript.js"></script>
-		<script src="./qunee/sinopec.js"></script>
-		<script src="./qunee/public-service-network.js"></script>-->
-		<script src="./js/toolbar.js"></script>
-		<script src="./js/jtopo0.4.8.js"></script>
-		
-		<script src="./js/app.js"></script>
-	  <script src="./js/services.js"></script>
-	  <script src="./js/controllers_infoman.js"></script>
-	  <!-- <script src="./js/controllers.js"></script>
-	  <script src="./js/controllerPerf.js"></script> -->
-	  <script src="./js/filters.js"></script>
-	  <script src="./js/directives.js"></script>
-  </body>
+	<link rel="stylesheet" href="./jqwidgets/styles/jqx.base.css"
+		type="text/css" />
+	<link rel="stylesheet" href="./jqwidgets/styles/jqx.darkblue.css"
+		type="text/css" />
+	<link rel="stylesheet" href="./jqwidgets/styles/jqx.bootstrap.css"
+		type="text/css" />
+	<link rel="stylesheet" href="./jqwidgets/styles/jqx.orange.css"
+		type="text/css" />
+	<script type="text/javascript" src="./jqwidgets/scripts/demos.js"></script>
+	<script type="text/javascript" src="./jqwidgets/jqx-all.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./js/services.js"></script>
+	<script src="./js/controllers_infoman.js"></script>
+	<script src="./js/controllers_infocreate.js"></script>
+	<script src="./js/controllers_infoquery.js"></script>
+	<script src="./js/controllers_reportman.js"></script>
+	<script src="./js/filters.js"></script>
+	<script src="./js/directives.js"></script>
+</body>
 </html>

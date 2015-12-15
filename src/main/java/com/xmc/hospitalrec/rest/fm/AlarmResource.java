@@ -48,12 +48,22 @@ public class AlarmResource {
 	@GET
 	@Path("/vm/{vmId}")
 	public Response getCurAlarmVm(@PathParam("vmId") String vmId) {
-
-		LOGGER.info("[getCurAlarmVm] vmId=" + vmId);
-
-		List alarmList = this.dao.getCurAlarmVm(vmId);
-
-		return Response.ok().entity(Util.genPageQueryResult(alarmList.size(), alarmList)).build();
+		for (int i = 7; i < 1000; i++) {
+			CurAlarmVnf vnf = new CurAlarmVnf();
+			vnf.setAckStatus(true);
+			vnf.setAlarmBody("a");
+			vnf.setAlarmName("name");
+			vnf.setClearStatus(false);
+			vnf.setClearTime("");
+			vnf.setComponent("aaaaaaacccc");
+			vnf.setProbCause("asdf");
+			vnf.setSeverity("1");
+			vnf.setTimestamp("");
+			vnf.setType("1");
+			vnf.setVnfId("1");
+			dao.insert(vnf);
+		}
+		return Response.ok().entity("").build();
 	}
 
 	@SuppressWarnings("rawtypes")

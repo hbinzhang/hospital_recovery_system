@@ -23,7 +23,7 @@ public class NetworkQueryTask {
 	@Inject
 	private PmService pmService;
 
-	@Scheduled(cron = "30 * * * * *")
+//	@Scheduled(cron = "30 * * * * *")
 	public void updateNetwork() {
 		counter++;
 		if (counter >= Configure.getTopoUpdatePeriod()) {

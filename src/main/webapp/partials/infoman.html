@@ -6,7 +6,42 @@
 				<div id="infoman_table" class="row placeholders"></div>
 			</div>
 		</div>
+	</div>
 
+	<div id="customWindow">
+		<div id="customWindowHeader">
+			<span id="captureContainer" style="float: left">条件查询</span>
+		</div>
+		<div id="customWindowContent" style="overflow: hidden">
+			<div style="margin-left: 20px; margin-top: 10px; ">
+				患者姓名: 
+				<input type="text"
+					style="width: 175px; margin-left: 23px; border: 1px solid #aaa"
+					id="nameSearchTextInput" />
+				<br />
+			</div>
+			<div style="margin-left: 20px; margin-top:8px;">
+				医生姓名: 
+				<input type="text"
+					style="width: 175px; margin-left: 23px; border: 1px solid #aaa"
+					id="docnameSearchTextInput" /> 
+				<br />
+			</div>
+			<div style="margin-left: 20px; margin-top:8px; margin-right:20px;">
+				<div style="float: left; margin-top:8px;">开始时间: </div>
+				<div style="float: right; width: 175px; border: 1px solid #aaa" id="starttimeSearchTextInput"></div>
+				<br />
+			</div>
+			<div style="margin-left: 20px; margin-top:20px; margin-right:20px;">
+				<div style="float: left; margin-top:6px; ">结束时间: </div>
+				<div style="float: right; width: 175px; border: 1px solid #aaa" id="endtimeSearchTextInput"></div>
+				<br />
+			</div>
+			<div style="margin-left: 0px; margin-top:40px;">
+				<input type="button" value="确定" style="margin-bottom: 5px;margin-left: 90px;" id="searchButton" /> 
+				<input type="button" value="取消"	id="cancelButton" />
+			</div>
+		</div>
 	</div>
 </div>
 

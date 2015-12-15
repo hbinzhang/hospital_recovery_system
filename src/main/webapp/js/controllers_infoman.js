@@ -1,10 +1,17 @@
 angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
 		function($scope) {
+	checkLogin();
 	var alarmQueryVnfUrl = baseUrl + "fm/vnf/";
 	var dataurl = alarmQueryVnfUrl + "1";
 	var source = {
 			datatype: "json",
 			url: dataurl,
+            pager: function (pagenum, pagesize, oldpagenum) {
+                // callback called when a page or page size is changed.
+            	console.log('page changed, pagenum: ' + pagenum);
+            	console.log('page changed, pagesize: ' + pagesize);
+            	console.log('page changed, oldpagenum: ' + oldpagenum);
+            },
 			updaterow: function(rowid, rowdata, commit) {
 				commit(true);
 			},
@@ -60,16 +67,20 @@ angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
 	var pageWid = document.body.clientWidth;
 	var gridWid = pageWid - 80;
 
+//	var pageHeight = document.body.scrollHeight;
+//	var gridHei = pageHeight - 80;
 	$("#infoman_table").jqxGrid({
 		theme: themeConstant,
 		sortable: true,
 		autoheight: true,
+		pageable: true,
+		pagesizeoptions: ['10', '20', '50'],
 		width: gridWid,
-		height:600,
+//		height:gridHei,
 		editable: false,
 		source: dataAdapter,
 		enabletooltips: true,
-		selectionmode: 'checkbox',
+		selectionmode: 'singlerow',
 		columnsresize: true,
 		columns: [
 		          {
@@ -141,14 +152,86 @@ angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
 		          toolbarheight: 40,
 		          rendertoolbar: function(statusbar) {
 		        	  var container = $("<div style='overflow: hidden; position: relative; margin: 5px;'></div>");
-		        	  var confirmButton = $("<div style='float: left; margin-left: 5px;'><span class='glyphicon glyphicon-ok' aria-hidden='true'><span style='margin-left: 4px; position: relative;'>确认</span></div>");
-		        	  container.append(confirmButton);
+		        	  var detailButton = $("<div style='float: left; margin-left: 5px;'><span class='glyphicon glyphicon-ok' aria-hidden='true'><span style='margin-left: 4px; position: relative;'>查看</span></div>");
+		        	  var addButton = $("<div style='float: left; margin-left: 5px;'><span class='glyphicon glyphicon-ok' aria-hidden='true'><span style='margin-left: 4px; position: relative;'>新建</span></div>");
+		        	  var queryButton = $("<div style='float: left; margin-left: 5px;'><span class='glyphicon glyphicon-ok' aria-hidden='true'><span style='margin-left: 4px; position: relative;'>查询</span></div>");
+		        	  container.append(addButton);
+		        	  container.append(detailButton);
+		        	  container.append(queryButton);
 		        	  statusbar.append(container);
-		        	  confirmButton.jqxButton({
+		        	  addButton.jqxButton({
 		        		  theme: btnTheme,
 		        		  width: 100,
 		        		  height: 20
 		        	  });
+		        	  detailButton.jqxButton({
+		        		  theme: btnTheme,
+		        		  width: 100,
+		        		  height: 20
+		        	  });
+		        	  queryButton.jqxButton({
+		        		  theme: btnTheme,
+		        		  width: 100,
+		        		  height: 20
+		        	  });
+		        	  detailButton.click(function(event) {
+    	        		  window.location.href="#/info_query?infoid=1";
+    	        	  });
+		        	  addButton.click(function(event) {
+		        		  window.location.href="#/info_create?infoid=1";
+    	        	  });
+		        	  queryButton.click(function(event) {
+		        		  // 弹出条件对话框
+		        		  $('#customWindow').jqxWindow("open");
+		        		  $('#endtimeSearchTextInput').jqxDateTimeInput('val', new Date());
+    	        	  });
 		          }
 	});
+	
+	$("#infoman_table").on("pagechanged", function (event) {
+        var args = event.args;
+        console.log("pagechanged Page:" + args.pagenum + ", Page Size: " + args.pagesize);
+        // get page information.
+        var paginginformation = $("#infoman_table").jqxGrid('getpaginginformation');
+        console.log("pagechanged Page:" + paginginformation.pagenum + ", Page Size: " + paginginformation.pagesize + ", Pages Count: " + paginginformation.pagescount);
+    });
+
+    $("#infoman_table").on("pagesizechanged", function (event) {
+        var args = event.args;
+        console.log("pagesizechanged Page:" + args.pagenum + ", Page Size: " + args.pagesize);
+        // get page information.          
+        var paginginformation = $("#infoman_table").jqxGrid('getpaginginformation');
+        console.log("pagesizechanged Page:" + paginginformation.pagenum + ", Page Size: " + paginginformation.pagesize + ", Pages Count: " + paginginformation.pagescount);
+    });
+	
+    $("#starttimeSearchTextInput").jqxDateTimeInput({
+        animationType: 'slide',
+        width: '200px',
+        showTimeButton: true,
+        formatString: "yyyy/MM/dd HH:mm:ss"
+    });
+    
+    $("#endtimeSearchTextInput").jqxDateTimeInput({
+        animationType: 'slide',
+        width: '200px',
+        showTimeButton: true,
+        formatString: "yyyy/MM/dd HH:mm:ss"
+    });
+
+    $('#customWindow').jqxWindow({  
+    	theme: btnTheme,
+    	isModal: true,
+    	width: 340,
+    	height: 260, 
+    	autoOpen: false,
+    	resizable: false,
+    	cancelButton: $('#cancelButton'),
+    	initContent: function () {
+    		$("#nameSearchTextInput").jqxInput({placeHolder: "请输入患者姓名", height: 25, width: 200, minLength: 1});
+    		$("#docnameSearchTextInput").jqxInput({placeHolder: "请输入医师姓名", height: 25, width: 200, minLength: 1});
+    		
+    		$('#searchButton').jqxButton({ theme: btnTheme, width: '80px', disabled: false });
+    		$('#cancelButton').jqxButton({ theme: btnTheme, width: '80px', disabled: false });
+    	}
+    });
 });
