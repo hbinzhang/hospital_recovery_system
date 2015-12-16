@@ -23,6 +23,7 @@ html, body, table {
 	background-color: #f5f5f5;
 	width: 100%;
 	text-align: center;
+	height: 600px;
 }
 
 .form-signin-heading {
@@ -122,7 +123,7 @@ input[type="text"], input[type="password"] {
 </style>
 </head>
 
-<body>
+<body style="background-image:url('./images/login_back.png');background-size:100%; ">
 	<h1 class="form-signin-heading">康复中心信息管理系统</h1>
 	<form id="loginForm" class="form-signin"
 		action="" method="post">
@@ -131,8 +132,8 @@ input[type="text"], input[type="password"] {
 			class="input-block-level required" value=""> <label
 			class="input-label" for="password">密码</label> <input type="password"
 			id="password" name="password" class="input-block-level required">
-		<input class="btn btn-large btn-primary login-btn-position" type="button" value="登 录" 
-		onclick="window.location.href='./index.html'"/>
+		<input class="btn btn-large btn-success login-btn-position" type="button" value="登 录" 
+		onclick="window.location.href='./index.html#/infoman'"/>
 	</form>
 </body>
 </html>

@@ -22,7 +22,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     $routeProvider.when('/info_create', {templateUrl: 'partials/infodetail.html', controller: 'MyCtrlInfoCreate'});
     $routeProvider.when('/info_query', {templateUrl: 'partials/infodetail.html', controller: 'MyCtrlInfoQuery'});
     $routeProvider.when('/reportman', {templateUrl: 'partials/reportman.html', controller: 'MyCtrlReportman'});
-    $routeProvider.otherwise({redirectTo: '/infoman'});
+//    $routeProvider.otherwise({redirectTo: '/infoman'});
   }]);
   
   
