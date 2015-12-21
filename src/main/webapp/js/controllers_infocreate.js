@@ -14,6 +14,7 @@ angular.module('myApp').controller('MyCtrlInfoCreate',
 	$("#doctorNameInput").jqxInput({placeHolder: "", height: 25, width: 200, minLength: 1});
 	$("#doctorCodeInput").jqxInput({placeHolder: "", height: 25, width: 200, minLength: 1});
 	
+	$("#printButton").hide();
 	$('#sureButton').jqxButton({ theme: btnTheme, width: '100px', height: '30px',disabled: false });
 	$('#cancelButton').jqxButton({ theme: btnTheme, width: '100px', height: '30px', disabled: false });
 	

@@ -1,6 +1,8 @@
 angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
 		function($scope) {
 	checkLogin();
+	$('#jqxTabs').jqxTabs({ width: '100%',height: 500, position: 'top'});
+	 
 	var alarmQueryVnfUrl = baseUrl + "fm/vnf/";
 	var dataurl = alarmQueryVnfUrl + "1";
 	var source = {
@@ -64,8 +66,9 @@ angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
 		loadComplete: function(data) {}
 	});
 
-	var pageWid = document.body.clientWidth;
-	var gridWid = pageWid - 80;
+	var tabwidth = $('#jqxTabs').jqxTabs('width'); 
+//	var pageWid = document.body.clientWidth;
+//	var gridWid = pageWid - 80;
 
 //	var pageHeight = document.body.scrollHeight;
 //	var gridHei = pageHeight - 80;
@@ -75,8 +78,7 @@ angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
 		autoheight: true,
 		pageable: true,
 		pagesizeoptions: ['10', '20', '50'],
-		width: gridWid,
-//		height:gridHei,
+		width: '100%',
 		editable: false,
 		source: dataAdapter,
 		enabletooltips: true,
@@ -104,7 +106,8 @@ angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
 		          {
 		        	  text: '年龄',
 		        	  columntype: 'textbox',
-		        	  datafield: 'type'
+		        	  datafield: 'type',
+		        	  width: 120
 		          },
 		          {
 		        	  text: '类型',
@@ -127,26 +130,22 @@ angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
 		          {
 		        	  text: '科室',
 		        	  columntype: 'textbox',
-		        	  datafield: 'alarmBody',
-		        	  width: 120
+		        	  datafield: 'alarmBody'
 		          },
 		          {
 		        	  text: '医师',
 		        	  columntype: 'textbox',
-		        	  datafield: 'ackStatus',
-		        	  width: 120
+		        	  datafield: 'ackStatus'
 		          },
 		          {
 		        	  text: '项目',
 		        	  columntype: 'textbox',
-		        	  datafield: 'clearStatus',
-		        	  width: 120
+		        	  datafield: 'clearStatus'
 		          },
 		          {
 		        	  text: '记录',
 		        	  columntype: 'textbox',
-		        	  datafield: 'clearTime',
-		        	  width: 120
+		        	  datafield: 'clearTime'
 		          }],
 		          showtoolbar: true,
 		          toolbarheight: 40,
@@ -259,7 +258,14 @@ angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
     		$("#docnameSearchTextInput").jqxInput({placeHolder: "请输入医师姓名", height: 25, width: 200, minLength: 1});
     		
     		$('#searchButton').jqxButton({ theme: btnTheme, width: '80px', disabled: false });
-    		$('#cancelButton').jqxButton({ theme: btnTheme, width: '80px', disabled: false });
+    		$('#cancelButton').jqxButton({ theme: btnTh8eme, width: '80px', disabled: false });
     	}
     });
+    
+    $("#jqxWidget").jqxPanel({ width: 180, height: 180});
+    $("#jqxWidget2").jqxPanel({ width: 180, height: 180});
+    $("#jqxWidget3").jqxPanel({ width: 180, height: 180});
+    $("#jqxWidget4").jqxPanel({ width: 180, height: 180});
+    $("#jqxWidget5").jqxPanel({ width: 180, height: 180});
+    $("#jqxWidget6").jqxPanel({ width: 180, height: 180});
 });

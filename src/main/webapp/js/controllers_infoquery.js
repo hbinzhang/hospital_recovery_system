@@ -14,8 +14,13 @@ angular.module('myApp').controller('MyCtrlInfoQuery',
 	$("#doctorNameInput").jqxInput({placeHolder: "", height: 25, width: 200, minLength: 1});
 	$("#doctorCodeInput").jqxInput({placeHolder: "", height: 25, width: 200, minLength: 1});
 	
+	$('#printButton').jqxButton({ theme: btnTheme, width: '100px', height: '30px',disabled: false });
 	$('#sureButton').jqxButton({ theme: btnTheme, width: '100px', height: '30px',disabled: false });
 	$('#cancelButton').jqxButton({ theme: btnTheme, width: '100px', height: '30px', disabled: false });
+	
+	$('#printButton').on('click', function () {
+		window.open("printPreview.html?menuId=12321");
+	}); 
 	
 	var source = {
 			datatype: "json",

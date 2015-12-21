@@ -18,9 +18,9 @@ function checkLogin() {
 // Declare app level module which depends on filters, and services
 angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'myApp.controllers','ngRoute','ngSanitize']).
   config(['$routeProvider', function($routeProvider) {
-  	$routeProvider.when('/infoman', {templateUrl: 'partials/infoman.html', controller: 'MyCtrlInfoman'});
-    $routeProvider.when('/info_create', {templateUrl: 'partials/infodetail.html', controller: 'MyCtrlInfoCreate'});
-    $routeProvider.when('/info_query', {templateUrl: 'partials/infodetail.html', controller: 'MyCtrlInfoQuery'});
+  	$routeProvider.when('/infoman', {templateUrl: 'partials/infoman_healer.html', controller: 'MyCtrlInfoman'});
+    $routeProvider.when('/info_create', {templateUrl: 'partials/infodetail_healer.html', controller: 'MyCtrlInfoCreate'});
+    $routeProvider.when('/info_query', {templateUrl: 'partials/infodetail_healer.html', controller: 'MyCtrlInfoQuery'});
     $routeProvider.when('/reportman', {templateUrl: 'partials/reportman.html', controller: 'MyCtrlReportman'});
 //    $routeProvider.otherwise({redirectTo: '/infoman'});
   }]);

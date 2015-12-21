@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>康复中心信息系统</title>
+<link rel="icon" href="./images/favicon.png"
+	mce_href="./images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+<input id="btnTest" type="button" value="test" onclick=changeDoc() />
+<input id="btnPrint" type="button" value="print" onclick=printDoc() />
+sdf
+</body>
+
+<script>
+	function GetQueryString(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*(&|$))");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null)
+			return unescape(r[2]);
+		return null;
+	}
+	
+	function changeDoc() {
+		window.document.body.innerHTML = 'asdf';
+	}
+	
+	function printDoc() {
+		window.print();
+	}
+	
+//	changeDoc();
+</script>
+
+</html>
