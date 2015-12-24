@@ -262,10 +262,4 @@ angular.module('myApp.controllers', []).controller('MyCtrlInfoman',
     	}
     });
     
-    $("#jqxWidget").jqxPanel({ width: 180, height: 180});
-    $("#jqxWidget2").jqxPanel({ width: 180, height: 180});
-    $("#jqxWidget3").jqxPanel({ width: 180, height: 180});
-    $("#jqxWidget4").jqxPanel({ width: 180, height: 180});
-    $("#jqxWidget5").jqxPanel({ width: 180, height: 180});
-    $("#jqxWidget6").jqxPanel({ width: 180, height: 180});
 });

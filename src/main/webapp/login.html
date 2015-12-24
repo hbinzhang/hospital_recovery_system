@@ -16,8 +16,20 @@
 
 <link href="theme.css" rel="stylesheet">
 <link rel="stylesheet" href="./css/app.css" />
+<script src="./jquery-1.11.1/jquery-1.11.1.min.js"></script>
 <script
 	src="./bootstrap-3.3.5/dist/assets/js/ie-emulation-modes-warning.js"></script>
+<script>
+function loginAction() {
+	var uname = $("#username").val();
+	if (uname === 'd') {
+		window.location.href ='./index_doctor.html#/infoman_doctor';
+	} else {
+		window.location.href ='.#/infoman';
+	}
+}
+</script>
+	
 <style type="text/css">
 html, body, table {
 	background-color: #f5f5f5;
@@ -125,15 +137,14 @@ input[type="text"], input[type="password"] {
 
 <body style="background-image:url('./images/login_back.png');background-size:100%; ">
 	<h1 class="form-signin-heading">康复中心信息管理系统</h1>
-	<form id="loginForm" class="form-signin"
-		action="" method="post">
+	<div id="loginForm" class="form-signin">
 		<label class="input-label" for="username">登录名</label> <input
 			type="text" id="username" name="username"
 			class="input-block-level required" value=""> <label
 			class="input-label" for="password">密码</label> <input type="password"
 			id="password" name="password" class="input-block-level required">
-		<input class="btn btn-large btn-success login-btn-position" type="button" value="登 录" 
-		onclick="window.location.href='./index.html#/infoman'"/>
-	</form>
+		<input id="loginButton" class="btn btn-large btn-success login-btn-position" type="button" value="登 录"
+		onclick="loginAction()" />
+	</div>
 </body>
 </html>
