@@ -156,6 +156,8 @@ body {
 	-moz-border-radius: 15px;      /* Gecko browsers */
   -webkit-border-radius: 15px;   /* Webkit browsers */
   border-radius:15px;
+  text-align:center;
+  margin-left:120px;
 }
 
 

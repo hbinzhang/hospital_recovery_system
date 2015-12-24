@@ -225,5 +225,99 @@ angular.module('myApp').controller('MyCtrlInfoCreate',
 	});
 	
 	// init event
+	// draw body pics
+    var canvas = document.getElementById('canvas');
+    var stage = new JTopo.Stage(canvas);
+    var scene = new JTopo.Scene();
+    scene.alpha = 1;
+    scene.backgroundColor = "210,234,255";
+    
+    var selectedNode = null;
+	$("#picButtons").jqxButtonGroup({ theme: btnTheme, mode: 'default' });
+	$("#picButtons").on('buttonclick', function (event) {
+        var clickedButton = event.args.button;
+//        console.log("click " + clickedButton[0].id);
+        if (clickedButton[0].id == 'deleteArea') {
+        	if (selectedNode == null) {
+        		alert('请选择区域！');
+        	} else {
+        		scene.remove(selectedNode);
+        	}
+        } else if (clickedButton[0].id == 'horizonScaleOut') {
+        	if (selectedNode == null) {
+        		alert('请选择区域！');
+        	} else {
+        		selectedNode.scaleX = selectedNode.scaleX * 1.2;
+        	}
+        } else if (clickedButton[0].id == 'horizonScaleIn') {
+        	if (selectedNode == null) {
+        		alert('请选择区域！');
+        	} else {
+        		selectedNode.scaleX = selectedNode.scaleX * 0.8;
+        	}
+        } else if (clickedButton[0].id == 'verticalScaleOut') {
+        	if (selectedNode == null) {
+        		alert('请选择区域！');
+        	} else {
+        		selectedNode.scaleY = selectedNode.scaleY * 1.2;
+        	}
+        } else if (clickedButton[0].id == 'verticalScaleIn') {
+        	if (selectedNode == null) {
+        		alert('请选择区域！');
+        	} else {
+        		selectedNode.scaleY = selectedNode.scaleY * 0.8;
+        	}
+        } else if (clickedButton[0].id == 'rotateClockWise') {
+        	if (selectedNode == null) {
+        		alert('请选择区域！');
+        	} else {
+        		selectedNode.rotate = selectedNode.rotate + 0.15;
+        	}
+        } else if (clickedButton[0].id == 'rotateUcClockWise') {
+        	if (selectedNode == null) {
+        		alert('请选择区域！');
+        	} else {
+        		selectedNode.rotate = selectedNode.rotate - 0.15;
+        	}
+        }
+        
+    });
 	
+    function node(x, y, img, name, move) {
+        var node = new JTopo.Node(name);
+        node.setImage('./images/' + img, true);
+        node.setLocation(x, y);
+        node.fontColor = "0,0,0";
+        node.dragable = move;
+        scene.add(node);
+        return node;
+    }
+    node(0, 0, 'muscle.png', "", false);
+    
+    stage.dbclick(function(event) {
+        if (event.button == 0) {
+        	var elmOffset = $("#canvas").offset();
+            var fatherTop = elmOffset.top;
+            var fatherLeft = elmOffset.left;
+            
+        	var y = event.pageY - fatherTop;
+            var x = event.pageX - fatherLeft;
+        	var n = node(x, y, 'paint.png', "", true);
+            n.alpha = 0.8;
+            
+            n.addEventListener('mouseup', function(event){
+            	console.log('mup');
+            	selectedNode = this;
+            });
+        }
+    });
+    
+//    stage.click(function(event) {
+//        if (event.button == 0) {
+//        	console.log('clear state');
+//        	selectedNode = null;
+//        }
+//    });
+    
+    stage.add(scene);
 });
